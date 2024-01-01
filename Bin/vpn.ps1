@@ -1,17 +1,21 @@
 # Variables
-$openVpnInstallerUrl = "https://swupdate.openvpn.org/community/releases/openvpn-install-2.5.6-I601.exe"
-$openVpnInstaller = "openvpn-install-2.5.6-I601.exe"
+$openVpnInstallerUrl = "https://swupdate.openvpn.org/community/releases/OpenVPN-2.6.8-I001-amd64.msi"
+$openVpnInstaller = "OpenVPN-2.6.8-I001-amd64.msi"
 $openVpnConfigUrl = "https://www.vpnbook.com/free-openvpn-account/VPNBook.com-OpenVPN-Euro1.zip"
 $openVpnConfigFile = "VPNBook.com-OpenVPN-Euro1.ovpn"
 $passwordFilePath = "credentials.txt"
 $startupShortcut = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\ConnectVPN.lnk"
+$openVpnConfigDirectory = "C:\Program Files\OpenVPN\config"  # Update this with the correct path
 
 # Download and install OpenVPN
 Invoke-WebRequest -Uri $openVpnInstallerUrl -OutFile $openVpnInstaller
-Start-Process -Wait -FilePath $openVpnInstaller
+Start-Process -Wait -FilePath msiexec -ArgumentList "/i", $openVpnInstaller, "/quiet", "/qn", "/norestart"
 
 # Download VPNBook configuration file
 Invoke-WebRequest -Uri $openVpnConfigUrl -OutFile $openVpnConfigFile
+
+# Copy the configuration file to the OpenVPN config directory
+Copy-Item -Path $openVpnConfigFile -Destination $openVpnConfigDirectory
 
 # Check for a new password on VPNBook website
 $newPassword = (Invoke-WebRequest -Uri "https://www.vpnbook.com/freevpn" | Select-String -Pattern 'Password: (.+)' | ForEach-Object { $_.Matches.Groups[1].Value }).Trim()
