@@ -392,7 +392,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Control Panel\Desktop]
 "HungAppTimeout"="4000"
-"LogPixels"=dword:00000096
+"LogPixels"=dword:00000062
 "LowLevelHooksTimeout"=dword:00001000
 "WaitToKillAppTimeout"="5000"
 "WaitToKillServiceTimeout"=dword:00002000
