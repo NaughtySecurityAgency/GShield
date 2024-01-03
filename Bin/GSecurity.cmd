@@ -153,3 +153,5 @@ md %windir%\PasswordUpdaterService
 )
 sc create PasswordUpdaterService binpath= %windir%\PasswordUpdaterService\PasswordUpdaterService.exe
 sc config PasswordUpdaterService start= auto
+:: Lgpo
+Lgpo /g "%~dp0"
