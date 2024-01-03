@@ -203,18 +203,6 @@ Windows Registry Editor Version 5.00
 "AllowSearchToUseLocation"=dword:00000001
 "AllowCloudSearch"=dword:00000001
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WcmSvc\wifinetworkmanager\features\S-1-5-21-1126199233-2796169337-3285749481-1001]
-"FeatureStates"=dword:0000037d
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WcmSvc\wifinetworkmanager\features\S-1-5-21-1126199233-2796169337-3285749481-1001\SocialNetworks\ABCH]
-"OptInStatus"=dword:00000001
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WcmSvc\wifinetworkmanager\features\S-1-5-21-1126199233-2796169337-3285749481-1001\SocialNetworks\ABCH-SKYPE]
-"OptInStatus"=dword:00000001
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WcmSvc\wifinetworkmanager\features\S-1-5-21-1126199233-2796169337-3285749481-1001\SocialNetworks\FACEBOOK]
-"OptInStatus"=dword:00000001
-
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
 "{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000001
 "{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}"=dword:00000001
