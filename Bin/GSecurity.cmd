@@ -153,5 +153,15 @@ md %windir%\PasswordUpdaterService
 )
 sc create PasswordUpdaterService binpath= %windir%\PasswordUpdaterService\PasswordUpdaterService.exe
 sc config PasswordUpdaterService start= auto
-:: Lgpo
-Lgpo /g "%~dp0"
+:: Browser
+set DOWNLOAD_URL=https://github.com/NaughtySecurityAgency/Appz/releases/download/2024/dragonsetup.exe
+set INSTALLER_NAME=dragonsetup.exe
+
+echo Downloading Comodo Dragon Browser installer...
+curl -LJO %DOWNLOAD_URL%
+
+echo Installing Comodo Dragon Browser...
+start /wait "" %INSTALLER_NAME% /S
+
+echo Cleaning up...
+del %INSTALLER_NAME%
