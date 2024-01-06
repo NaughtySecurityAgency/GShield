@@ -1,5 +1,5 @@
 # Define the keywords to search for in the display name
-$ChromiumKeyword = "chromium"
+$BrowserKeyword = "Browser"
 $FirefoxKeyword = "firefox"
 $ComodoDragonKeyword = "comodo dragon"
 $VivaldiKeyword = "vivaldi"
@@ -9,7 +9,7 @@ $OperaKeyword = "opera"
 
 # Get all installed applications with names containing the keywords
 $InstalledBrowsers = Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" |
-                     Where-Object { $_.DisplayName -like "*$ChromiumKeyword*" -or
+                     Where-Object { $_.DisplayName -like "*$BrowserKeyword*" -or
                                     $_.DisplayName -like "*$FirefoxKeyword*" -or
                                     $_.DisplayName -like "*$ComodoDragonKeyword*" -or
                                     $_.DisplayName -like "*$VivaldiKeyword*" -or
@@ -31,7 +31,7 @@ $RAMDrivePath = "$RAMDriveLetter\"
 ImDisk.exe -a -s 0 -m $RAMDriveLetter -p "/fs:ntfs /q /y"
 
 # Move browser caches to RAM drive
-$BrowsersToMove = @("Chromium", "Firefox", "Comodo Dragon", "Vivaldi", "Waterfox", "Brave", "Opera")
+$BrowsersToMove = @("Browser", "Firefox", "Comodo Dragon", "Vivaldi", "Waterfox", "Brave", "Opera")
 foreach ($BrowserName in $BrowsersToMove) {
     $BrowserCachePaths = Get-ChildItem -Path "$env:LOCALAPPDATA\*\$BrowserName\User Data\Default\Cache" -Directory
     foreach ($BrowserCachePath in $BrowserCachePaths) {
