@@ -1,10 +1,21 @@
-# Define the keyword to search for in the display name
+# Define the keywords to search for in the display name
 $ChromiumKeyword = "chromium"
 $FirefoxKeyword = "firefox"
+$ComodoDragonKeyword = "comodo dragon"
+$VivaldiKeyword = "vivaldi"
+$WaterfoxKeyword = "waterfox"
+$BraveKeyword = "brave"
+$OperaKeyword = "opera"
 
-# Get all installed applications with names containing the keyword
+# Get all installed applications with names containing the keywords
 $InstalledBrowsers = Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" |
-                     Where-Object { $_.DisplayName -like "*$ChromiumKeyword*" -or $_.DisplayName -like "*$FirefoxKeyword*" }
+                     Where-Object { $_.DisplayName -like "*$ChromiumKeyword*" -or
+                                    $_.DisplayName -like "*$FirefoxKeyword*" -or
+                                    $_.DisplayName -like "*$ComodoDragonKeyword*" -or
+                                    $_.DisplayName -like "*$VivaldiKeyword*" -or
+                                    $_.DisplayName -like "*$WaterfoxKeyword*" -or
+                                    $_.DisplayName -like "*$BraveKeyword*" -or
+                                    $_.DisplayName -like "*$OperaKeyword*" }
 
 # Display results
 Write-Host "Installed Browsers:"
@@ -19,17 +30,15 @@ $RAMDrivePath = "$RAMDriveLetter\"
 # Create dynamic RAM drive
 ImDisk.exe -a -s 0 -m $RAMDriveLetter -p "/fs:ntfs /q /y"
 
-# Move Chromium-based browsers cache to RAM drive
-$ChromiumCachePaths = Get-ChildItem -Path "$env:LOCALAPPDATA\*\User Data\Default\Cache" -Directory
-foreach ($ChromiumCachePath in $ChromiumCachePaths) {
-    Move-Item -Path $ChromiumCachePath.FullName -Destination $RAMDrivePath -Force
-    cmd /c mklink /D $ChromiumCachePath.FullName $RAMDrivePath
+# Move browser caches to RAM drive
+$BrowsersToMove = @("Chromium", "Firefox", "Comodo Dragon", "Vivaldi", "Waterfox", "Brave", "Opera")
+foreach ($BrowserName in $BrowsersToMove) {
+    $BrowserCachePaths = Get-ChildItem -Path "$env:LOCALAPPDATA\*\$BrowserName\User Data\Default\Cache" -Directory
+    foreach ($BrowserCachePath in $BrowserCachePaths) {
+        Move-Item -Path $BrowserCachePath.FullName -Destination $RAMDrivePath -Force
+        cmd /c mklink /D $BrowserCachePath.FullName $RAMDrivePath
+    }
 }
-
-# Move Mozilla Firefox cache to RAM drive
-$FirefoxCachPath = "$env:APPDATA\Mozilla\Firefox\Profiles\*.default\cache2"
-Move-Item -Path $FirefoxCachPath -Destination $RAMDrivePath -Force
-cmd /c mklink /D $FirefoxCachPath $RAMDrivePath
 
 # Set permissions for the current user and SYSTEM on the RAM drive
 $Acl = Get-Acl $RAMDrivePath
