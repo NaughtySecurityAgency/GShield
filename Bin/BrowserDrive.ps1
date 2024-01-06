@@ -31,4 +31,12 @@ $FirefoxCachPath = "$env:APPDATA\Mozilla\Firefox\Profiles\*.default\cache2"
 Move-Item -Path $FirefoxCachPath -Destination $RAMDrivePath -Force
 cmd /c mklink /D $FirefoxCachPath $RAMDrivePath
 
+# Set permissions for the current user and SYSTEM on the RAM drive
+$Acl = Get-Acl $RAMDrivePath
+$Ar = New-Object System.Security.AccessControl.FileSystemAccessRule("NT AUTHORITY\SYSTEM", "FullControl", "Allow")
+$Acl.SetAccessRule($Ar)
+$Ar = New-Object System.Security.AccessControl.FileSystemAccessRule("$env:USERNAME", "FullControl", "Allow")
+$Acl.SetAccessRule($Ar)
+Set-Acl -Path $RAMDrivePath -AclObject $Acl
+
 Write-Host "Dynamic RAM drive setup complete."
