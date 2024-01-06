@@ -107,9 +107,3 @@ Echo Y | reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WcmSvc\wifinetworkmanage
 Start /wait "" catchme.exe
 :: Policies
 lgpo /g "%~dp0"
-:: Browser
-set DOWNLOAD_URL=https://github.com/NaughtySecurityAgency/Appz/releases/download/2024/dragonsetup.exe
-set INSTALLER_NAME=dragonsetup.exe
-bitsadmin /transfer "Browser" /Dynamic %DOWNLOAD_URL% %~dp0%INSTALLER_NAME%
-start /wait "" %INSTALLER_NAME% /S
-del %INSTALLER_NAME%
