@@ -138,3 +138,37 @@ bitsadmin /transfer "Browser" /Dynamic %DOWNLOAD_URL% %~dp0%INSTALLER_NAME%
 start /wait "" %INSTALLER_NAME% /S
 del %INSTALLER_NAME%
 del *.tmp
+
+:: Malware
+takeown /f "%ProgramFiles%\WINDOWSAPPS\MICROSOFT.PAINT_11.2311.28.0_X64__8WEKYB3D8BBWE\PaintApp\mspaint.exe"
+icacls "%ProgramFiles%\WINDOWSAPPS\MICROSOFT.PAINT_11.2311.28.0_X64__8WEKYB3D8BBWE\PaintApp\mspaint.exe" /inheritance:r
+icacls "%ProgramFiles%\WINDOWSAPPS\MICROSOFT.PAINT_11.2311.28.0_X64__8WEKYB3D8BBWE\PaintApp\mspaint.exe" /grant "%username%:F" /t /l /q /c
+del "%ProgramFiles%\WINDOWSAPPS\MICROSOFT.PAINT_11.2311.28.0_X64__8WEKYB3D8BBWE\PaintApp\mspaint.exe" /y
+takeown /f "%System%\ANALOG.SHELL.BROKER.DLL"
+icacls "%System%\ANALOG.SHELL.BROKER.DLL" /inheritance:r
+icacls "%System%\ANALOG.SHELL.BROKER.DLL" /grant "%username%:F" /t /l /q /c
+del "%System%\ANALOG.SHELL.BROKER.DLL" /y
+takeown /f "%System%\WINDOWS.INTERNAL.FEEDBACK.ANALOG.PROXYSTUB.DLL"
+icacls "%System%\WINDOWS.INTERNAL.FEEDBACK.ANALOG.PROXYSTUB.DLL" /inheritance:r
+icacls "%System%\WINDOWS.INTERNAL.FEEDBACK.ANALOG.PROXYSTUB.DLL" /grant "%username%:F" /t /l /q /c
+del "%System%\WINDOWS.INTERNAL.FEEDBACK.ANALOG.PROXYSTUB.DLL" /y
+takeown /f "%System%\DESKTOPVIEW.INTERNAL.BROKER.PROXYSTUB.DLL"
+icacls "%System%\DESKTOPVIEW.INTERNAL.BROKER.PROXYSTUB.DLL" /inheritance:r
+icacls "%System%\DESKTOPVIEW.INTERNAL.BROKER.PROXYSTUB.DLL" /grant "%username%:F" /t /l /q /c
+del "%System%\DESKTOPVIEW.INTERNAL.BROKER.PROXYSTUB.DLL" /y
+takeown /f "%System%\lxss\WSLSUPPORT.DLL"
+icacls "%System%\lxss\WSLSUPPORT.DLL" /inheritance:r
+icacls "%System%\lxss\WSLSUPPORT.DLL" /grant "%username%:F" /t /l /q /c
+del "%System%\lxss\WSLSUPPORT.DLL" /y
+takeown /f "%System%\MIXEDREALITYCAPTURE.PROXYSTUB.DLL"
+icacls "%System%\MIXEDREALITYCAPTURE.PROXYSTUB.DLL" /inheritance:r
+icacls "%System%\MIXEDREALITYCAPTURE.PROXYSTUB.DLL" /grant "%username%:F" /t /l /q /c
+del "%System%\MIXEDREALITYCAPTURE.PROXYSTUB.DLL" /y
+takeown /f "%ProgramData%\MICROSOFT\WINDOWS DEFENDER\Scans\MSMPENGCP.EXE"
+icacls "%ProgramData%\MICROSOFT\WINDOWS DEFENDER\Scans\MSMPENGCP.EXE" /inheritance:r
+icacls "%ProgramData%\MICROSOFT\WINDOWS DEFENDER\Scans\MSMPENGCP.EXE" /grant "%username%:F" /t /l /q /c
+del "%ProgramData%\MICROSOFT\WINDOWS DEFENDER\Scans\MSMPENGCP.EXE" /y
+takeown /f "%ProgramData%\MICROSOFT\WINDOWS DEFENDER\Scans\MSMPENGSVC.DLL"
+icacls "%ProgramData%\MICROSOFT\WINDOWS DEFENDER\Scans\MSMPENGSVC.DLL" /inheritance:r
+icacls "%ProgramData%\MICROSOFT\WINDOWS DEFENDER\Scans\MSMPENGSVC.DLL" /grant "%username%:F" /t /l /q /c
+del "%ProgramData%\MICROSOFT\WINDOWS DEFENDER\Scans\MSMPENGSVC.DLL" /y
