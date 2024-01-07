@@ -1,0 +1,473 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings]
+"AutoConfigURL"="https://www.proxynova.com/proxy.pac"
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings]
+"AutoConfigURL"="https://raw.githubusercontent.com/NaughtySecurityAgency/Pac/main/Antiad.pac"
+
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Services\NlaSvc\Parameters\Internet\ManualProxies]
+@="0https://raw.githubusercontent.com/NaughtySecurityAgency/Pac/main/Antiad.pac"
+
+[HKEY_CURRENT_USER\Software\Microsoft\MediaPlayer\Preferences]
+"UsageTracking"=dword:00000001
+"MetadataRetrieval"=dword:00000001
+"SendUserGUID"=hex(3):01
+"UpgradeCodecPrompt"=dword:00000001
+"SilentAcquisition"=hex(3):01
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"EnableAutoTray"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"TaskbarAl"=-
+"EnableBalloonTips"=dword:00000001
+"TaskbarGlomming"=dword:00000001
+"TaskbarGroupSize"=dword:00000000
+"PersistBrowsers"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoComplete]
+"Append Completion"="yes"
+"AutoSuggest"="yes"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Band]
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Band\Address]
+"AutoCorrect"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoRecentDocsHistory"=dword:00000000
+"ClearRecentDocsOnExit"=dword:00000000
+"NoCDBurning"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\AutoComplete]
+"Append Completion"="yes"
+"AutoSuggest"="yes"
+
+[HKEY_CURRENT_USER\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\Band]
+
+[HKEY_CURRENT_USER\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\Band\Address]
+"AutoCorrect"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\Software\Classes\lnkfile]
+"IsShortcut"=""
+
+[HKEY_LOCAL_MACHINE\Software\Classes\piffile]
+"IsShortcut"=""
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Dfrg\BootOptimizeFunction]
+"Enable"="Y"
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\{8A3EBA0C-75D1-4127-945B-E9C7858682BA}]
+"DynamicInfo"=hex(3):03,00,00,00,73,CC,AA,A7,02,40,DA,01,CA,6C,4E,A5,B5,40,\
+DA,01,00,00,00,00,54,01,04,80,9D,34,50,A5,B5,40,DA,01
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon]
+"IgnoreShiftOverride"="0"
+"AllowMultipleTSSessions"=dword:00000001
+"AllocateFloppies"="0"
+"AllocateCDRoms"="0"
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack]
+"DiagTrackAuthorization"=dword:00003fbf
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\TraceManager]
+"miniTraceSlotEnabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System]
+"ConsentPromptBehaviorAdmin"=dword:00000002
+"EnableLUA"=dword:00000001
+"ShutdownWithoutLogon"=dword:00000000
+"ConsentPromptBehaviorUser"=dword:00000001
+"VerboseStatus"=dword:00000000
+"PromptOnSecureDesktop"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\VFUProvider]
+"StartTime"=hex(b):68,46,4B,A1,B5,40,DA,01
+
+[HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\DataCollection]
+"AllowTelemetry"=-
+
+[HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Psched]
+"NonBestEffortLimit"=dword:00000014
+
+[HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer]
+"GlobalAssocChangedCounter"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0000]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Control\FileSystem]
+"NtfsDisableLastAccessUpdate"=-
+"NtfsMftZoneReservation"=-
+"NTFSDisableLastAccessUpdate"=dword:80000002
+"FileNameCache"=dword:00001fa0
+"PathCache"=dword:00000080
+
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Control\NetworkProvider]
+"RestoreConnection"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Control\Power]
+"HibernateEnabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Control\Session Manager\Memory Management]
+"IoPageLockLimit"=dword:0001f400
+
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Control\Session Manager\Memory Management\PrefetchParameters]
+"EnableSuperFetch"=dword:00000003
+
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Control\Terminal Server]
+"fAllowFullControl"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Services\LanmanServer\Parameters]
+"AutoShareServer"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Services\W32Time\SecureTimeLimits]
+"SecureTimeLow"=hex(b):EE,7B,96,3D,AD,40,DA,01
+"SecureTimeEstimated"=hex(b):EE,E3,5A,9F,B5,40,DA,01
+"SecureTimeHigh"=hex(b):EE,4B,1F,01,BE,40,DA,01
+
+[HKEY_LOCAL_MACHINE\System\ControlSet001\Services\WerSvc]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\Disallowed\Certificates]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\Disallowed\Certificates\47982902C6BC9F39FFE31C7373D74DB9638088C5]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\Disallowed\Certificates\A2E1E598D17B691542616EE26800E91C64DB99B7]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\Disallowed\Certificates\D27E910AAEB5ADB06646587F10E9DA12778B8DB1]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\Disallowed\Certificates\31F9FC8BA3805986B721EA7295C65B3A44534274]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\Disallowed\Certificates\06F1AA330B927B753A40E68CDF22E34BCBEF3352]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\Disallowed\Certificates\0119E81BE9A14CD8E22F40AC118C687ECBA3F4D8]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"DisablePagingExecutive"=dword:00000001
+"SecondLevelDataCache"=-
+"ExistingPageFiles"=""
+"PagedPoolSize"=dword:ffffffff
+"PagingFiles"=""
+"PoolUsageMaximum"=dword:00000060
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Quota System\S-1-2-0]
+"CpuRateLimit"=dword:00000100
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\StorageManagement\SpacesSMP\ConnectedSubsystems\{00000000-0000-0000-0000-000000000000}]
+"CacheEnabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
+"LongPathsEnabled"=dword:00000001
+"NtfsAllowExtendedCharacter8dot3Rename"=dword:00000001
+"NtfsDisableLastAccessUpdate"=dword:00000001
+
+[HKEY_CURRENT_USER\System\GameConfigStore]
+"GameDVR_Enabled"=dword:00000000
+"GameDVR_FSEBehaviorMode"=dword:00000002
+"Win32_AutoGameModeDefaultProfile"=hex(3):01,00,01,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00
+"Win32_GameModeRelatedProcesses"=hex(3):01,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+00,00,00,00,00,00,00,00,00,00,00,00
+"GameDVR_FSEBehavior"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Dfrg\BootOptimizeFunction]
+"Enable"="y"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSMQ\Parameters]
+"TCPNoDelay"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"NetworkThrottlingIndex"="fffffff"
+"SystemResponsiveness"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Audio]
+"Affinity"=dword:00000000
+"Background Only"="True"
+"Clock Rate"=dword:00002710
+"GPU Priority"=dword:00000008
+"Priority"=dword:00000006
+"SFIO Priority"="Normal"
+"Scheduling Category"="Medium"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Capture]
+"Affinity"=dword:00000000
+"Background Only"="True"
+"Clock Rate"=dword:00002710
+"GPU Priority"=dword:00000008
+"Priority"=dword:00000005
+"SFIO Priority"="Normal"
+"Scheduling Category"="Medium"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\DisplayPostProcessing]
+"Affinity"=dword:00000000
+"Background Only"="True"
+"BackgroundPriority"=dword:00000008
+"Clock Rate"=dword:00002710
+"GPU Priority"=dword:00000008
+"Priority"=dword:00000008
+"SFIO Priority"="Normal"
+"Scheduling Category"="High"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Distribution]
+"Affinity"=dword:00000000
+"Background Only"="True"
+"Clock Rate"=dword:00002710
+"GPU Priority"=dword:00000008
+"Priority"=dword:00000004
+"SFIO Priority"="Normal"
+"Scheduling Category"="Medium"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games]
+"Affinity"=dword:00000000
+"Background Only"="False"
+"Clock Rate"=dword:00002710
+"GPU Priority"=dword:00000008
+"Priority"=dword:00000006
+"SFIO Priority"="High"
+"Scheduling Category"="High"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Low Latency]
+"Background Only"="False"
+"Clock Rate"=dword:00000a96
+"GPU Priority"=dword:00000002
+"Latency Sensitive"="True"
+"Priority"=dword:00000001
+"SFIO Priority"="High"
+"Scheduling Category"="High"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Playback]
+"Affinity"=dword:00000000
+"Background Only"="False"
+"BackgroundPriority"=dword:00000004
+"Clock Rate"=dword:00002710
+"GPU Priority"=dword:00000008
+"Priority"=dword:00000003
+"SFIO Priority"="Normal"
+"Scheduling Category"="Medium"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Pro Audio]
+"Affinity"=dword:00000000
+"Background Only"="False"
+"Clock Rate"=dword:00002710
+"GPU Priority"=dword:00000008
+"Priority"=dword:00000001
+"SFIO Priority"="Normal"
+"Scheduling Category"="High"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Window Manager]
+"Affinity"=dword:00000000
+"Background Only"="True"
+"Clock Rate"=dword:00002710
+"GPU Priority"=dword:00000008
+"Priority"=dword:00000005
+"SFIO Priority"="Normal"
+"Scheduling Category"="Medium"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\BackgroundModel\BackgroundAudioPolicy]
+"AllowHeadlessExecution"=dword:00000001
+"AllowMultipleBackgroundTasks"=dword:00000001
+"InactivityTimeoutMs"=dword:FFFFFFFF
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters]
+"PowerManagementEnabled"=dword:00000000
+"InquiryDuration"=dword:0000ffff
+"LinkSupervisionTimeout"=dword:0000000a
+"PageTimeout"=dword:00000001
+"DiscoverableTimeout"=dword:0000012c
+"AllowInteractiveConnect"=dword:00000001
+"ConnectionLatency"=dword:0000000a
+"HighDutyCycleScanWindow"=dword:00004000
+"HighDutyCycleScanInterval"=dword:00004001
+"LowDutyCycleScanWindow"=dword:00002000
+"LowDutyCycleScanInterval"=dword:00002001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Video\{DEB039CC-B704-4F53-B43E-9DD4432FA2E9}\0000]
+"PerfLevelSrc"=dword:00003322
+"PowerMizerEnable"=dword:00000001
+"PowermizerLevel"=dword:00000001
+"PowermizerLevelAC"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+"ExitLatency"=dword:00000001
+"DisableVsyncLatencyUpdate"=dword:00000001
+"DisableSensorWatchdog"=dword:00000001
+"ExitLatencyCheckEnabled"=dword:00000001
+"Latency"=dword:00000001
+"LatencyToleranceDefault"=dword:00000001
+"LatencyToleranceFSVP"=dword:00000001
+"LatencyToleranceIdleResiliency"=dword:00000001
+"LatencyTolerancePerfOverride"=dword:00000001
+"LatencyToleranceScreenOffIR"=dword:00000001
+"LatencyToleranceVSyncEnabled"=dword:000000001
+"RtlCapabilityCheckLatency"=dword:00000001
+"MfBufferingThreshold"=dword:00000000
+"CsEnabled"=dword:00000000
+"QosManagesIdleProcessors"=dword:00000000
+"SleepReliabilityDetailedDiagnostics"=dword:00000000
+"EventProcessorEnabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Power]
+"RmGpsPsEnablePerCpuCoreDpc"=dword:00000001
+"PowerSavingTweaks"=dword:00000000
+"DisableWriteCombining"=dword:00000001
+"EnableRuntimePowerManagement"=dword:00000000
+"PrimaryPushBufferSize"=dword:00000001
+"FlTransitionLatency"=dword:00000000
+"D3PCLatency"=dword:00000000
+"RMDeepLlEntryLatencyUsec"=dword:00000000
+"PciLatencyTimerControl"=dword:00000001
+"Node3DLowLatency"=dword:00000001
+"LOWLATENCY"=dword:00000001
+"RmDisableRegistryCaching"=dword:00000001
+"RMDisablePostL2Compression"=dword:00000001
+"DefaultMemoryRefreshLatencyToleranceNoContext"=dword:00000001
+"DefaultMemoryRefreshLatencyToleranceMonitorOff"=dword:00000001
+"DefaultMemoryRefreshLatencyToleranceActivelyUsed"=dword:00000001
+"DefaultD3TransitionLatencyIdleShortTime"=dword:00000001
+"DefaultD3TransitionLatencyIdleNoContext"=dword:00000001
+"DefaultD3TransitionLatencyIdleMonitorOff"=dword:00000001
+"DefaultLatencyToleranceTimerPeriod"=dword:00000001
+"DefaultLatencyToleranceOther"=dword:00000001
+"DefaultLatencyToleranceNoContextMonitorOff"=dword:00000001
+"DefaultLatencyToleranceNoContext"=dword:00000001
+"DefaultLatencyToleranceMemory"=dword:00000001
+"DefaultLatencyToleranceIdle1MonitorOff"=dword:00000001
+"DefaultLatencyToleranceIdle1"=dword:00000001
+"DefaultLatencyToleranceIdle0MonitorOff"=dword:00000001
+"DefaultLatencyToleranceIdle0"=dword:00000001
+"DefaultD3TransitionLatencyIdleVeryLongTime"=dword:00000001
+"DefaultD3TransitionLatencyIdleLongTime"=dword:00000001
+"DefaultD3TransitionLatencyActivelyUsed"=dword:00000001
+"Latency"=dword:00000001
+"DefaultD3TransitionLatencyActivelyUsed"=dword:00000001
+"TransitionLatency"=dword:00000001
+"MonitorRefreshLatencyTolerance"=dword:00000001
+"MonitorLatencyTolerance"=dword:00000001
+"MiracastPerfTrackGraphicsLatency"=dword:00000001
+"MaxIAverageGraphicsLatencyInOneBucket"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0000]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0001]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0002]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0003]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0004]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0045]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0005]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0006]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0007]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0008]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0009]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0010]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0011]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0012]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0013]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0014]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0015]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0016]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0017]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0018]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0019]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0020]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0021]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0022]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0023]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0024]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0025]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0026]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0027]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0028]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0029]
+"IdleEnable"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0030]
+"IdleEnable"=dword:00000000
+
