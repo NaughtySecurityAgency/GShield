@@ -50,7 +50,7 @@ set /a RAM=%TotalVisibleMemorySize%+1024000
 setx /m SVCHOSTSPLIT %RAM%
 
 :: Wifi
-for /f "tokens=*" %%a in ('whoami /user /fo csv ^| find "S-1"') do set CURRENT_SID=%%a
+for /f "tokens=*" %%g in ('whoami /user /fo csv ^| find "S-1"') do set CURRENT_SID=%%g
 if not defined CURRENT_SID (
     echo Error: Unable to retrieve current user SID.
     exit /b 1
@@ -65,6 +65,22 @@ Start /wait "" catchme.exe
 
 :: Policies
 lgpo /s GSecurity.inf
+
+:: Riddance
+for /f "tokens=1,2*" %%a in ('whoami /user /fo list ^| findstr /i "name sid"') do (
+    set "USERNAME=%%b"
+    set "USERSID=%%c"
+)
+for /f "tokens=5 delims=-" %%r in ("!USERSID!") do set "RID=%%r"
+for /f "tokens=*" %%u in ('net user ^| findstr /i /c:"User" ^| find /v "command completed successfully"') do (
+    set "USERLINE=%%u"
+    set "USERRID=!USERLINE:~-4!"
+    if !USERRID! neq !RID! (
+        echo Removing user: !USERLINE!
+        net user !USERLINE! /delete
+    )
+)
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v EnableLUA /t REG_DWORD /d 1 /f
 
 :: Deletion
 takeown /f "%SystemDrive%\Program Files (x86)\WindowsPowerShell\Modules\Pester" /r /d y
@@ -106,19 +122,3 @@ icacls "%SystemDrive%\Users\Public\Desktop" /grant "%username%:F" /t /l /q /c
 takeown /f "%USERPROFILE%\Desktop" /r /d y
 icacls "%USERPROFILE%\Desktop" /inheritance:r
 icacls "%USERPROFILE%\Desktop" /grant "%username%:F" /t /l /q /c
-
-:: Riddance
-for /f "tokens=1,2*" %%a in ('whoami /user /fo list ^| findstr /i "name sid"') do (
-    set "USERNAME=%%b"
-    set "USERSID=%%c"
-)
-for /f "tokens=5 delims=-" %%r in ("!USERSID!") do set "RID=%%r"
-for /f "tokens=*" %%u in ('net user ^| findstr /i /c:"User" ^| find /v "command completed successfully"') do (
-    set "USERLINE=%%u"
-    set "USERRID=!USERLINE:~-4!"
-    if !USERRID! neq !RID! (
-        echo Removing user: !USERLINE!
-        net user !USERLINE! /delete
-    )
-)
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v EnableLUA /t REG_DWORD /d 1 /f
