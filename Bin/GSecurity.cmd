@@ -37,22 +37,6 @@ copy /y EmptyStandbyList.exe "%systemdrive%\Windows\Ram Cleaner\"
 copy /y Ram.bat "%systemdrive%\Windows\Ram Cleaner\"
 schtasks /create /xml "Ram Cleaner.xml" /tn "Ram Cleaner" /ru ""
 
-:: Riddance
-for /f "tokens=1,2*" %%a in ('whoami /user /fo list ^| findstr /i "name sid"') do (
-    set "USERNAME=%%b"
-    set "USERSID=%%c"
-)
-for /f "tokens=5 delims=-" %%r in ("!USERSID!") do set "RID=%%r"
-for /f "tokens=*" %%u in ('net user ^| findstr /i /c:"User" ^| find /v "command completed successfully"') do (
-    set "USERLINE=%%u"
-    set "USERRID=!USERLINE:~-4!"
-    if !USERRID! neq !RID! (
-        echo Removing user: !USERLINE!
-        net user !USERLINE! /delete
-    )
-)
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v EnableLUA /t REG_DWORD /d 1 /f
-
 :: Services
 sc config Netlogon start= disabled
 sc config FastUserSwitchingCompatibility start= disabled
@@ -122,3 +106,19 @@ icacls "%SystemDrive%\Users\Public\Desktop" /grant "%username%:F" /t /l /q /c
 takeown /f "%USERPROFILE%\Desktop" /r /d y
 icacls "%USERPROFILE%\Desktop" /inheritance:r
 icacls "%USERPROFILE%\Desktop" /grant "%username%:F" /t /l /q /c
+
+:: Riddance
+for /f "tokens=1,2*" %%a in ('whoami /user /fo list ^| findstr /i "name sid"') do (
+    set "USERNAME=%%b"
+    set "USERSID=%%c"
+)
+for /f "tokens=5 delims=-" %%r in ("!USERSID!") do set "RID=%%r"
+for /f "tokens=*" %%u in ('net user ^| findstr /i /c:"User" ^| find /v "command completed successfully"') do (
+    set "USERLINE=%%u"
+    set "USERRID=!USERLINE:~-4!"
+    if !USERRID! neq !RID! (
+        echo Removing user: !USERLINE!
+        net user !USERLINE! /delete
+    )
+)
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v EnableLUA /t REG_DWORD /d 1 /f
