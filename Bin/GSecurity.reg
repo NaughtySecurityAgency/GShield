@@ -1,8 +1,5 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_LOCAL_MACHINE\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings]
-"AutoConfigURL"="https://raw.githubusercontent.com/NaughtySecurityAgency/Pac/main/Antiad.pac"
-
 [HKEY_LOCAL_MACHINE\software\Adobe\Acrobat Reader\DC\Installer]
 "DisableMaintenance"=dword:00000001
 
