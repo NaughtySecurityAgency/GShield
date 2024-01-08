@@ -1,9 +1,5 @@
 Windows Registry Editor Version 5.00
 
-; Created with Winaero Tweaker 1.55.0.0
-; https://winaero.com
-
-
 [HKEY_LOCAL_MACHINE\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings]
 "AutoConfigURL"="https://raw.githubusercontent.com/NaughtySecurityAgency/Pac/main/Antiad.pac"
 
@@ -3778,4 +3774,9 @@ DA,01,00,00,00,00,54,01,04,80,9D,34,50,A5,B5,40,DA,01
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{36fc9e60-c465-11cf-8056-444553540000}\0030]
 "IdleEnable"=dword:00000000
 
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack]
+"ShowedToastAtLevel"=dword:00000003
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection]
+"AllowTelemetry"=dword:00000003
+"MaxTelemetryAllowed"=dword:00000003
