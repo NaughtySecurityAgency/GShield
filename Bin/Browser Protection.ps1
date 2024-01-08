@@ -56,7 +56,7 @@ Write-Host "Dynamic RAM drive setup complete."
 $installedPrograms = Get-WmiObject -Query "SELECT * FROM Win32_Product"
 
 # Filter for Chromium browsers
-$chromiumBrowsers = $installedPrograms | Where-Object { $_.Name -like "*Chromium*" }
+$chromiumBrowsers = $installedPrograms | Where-Object { $_.Name -like "*Browser" }
 
 foreach ($browser in $chromiumBrowsers) {
     Write-Output "Found Chromium browser: $($browser.Name)"
