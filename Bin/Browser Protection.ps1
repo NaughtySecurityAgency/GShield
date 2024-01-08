@@ -52,17 +52,14 @@ Set-Acl -Path $RAMDrivePath -AclObject $Acl
 
 Write-Host "Dynamic RAM drive setup complete."
 
-# Get the list of installed programs
-$installedPrograms = Get-WmiObject -Query "SELECT * FROM Win32_Product"
-
-# Filter for Chromium browsers
-$chromiumBrowsers = $installedPrograms | Where-Object { $_.Name -like "*Browser" }
+# Use installed browsers information to find Chromium browsers
+$chromiumBrowsers = $InstalledBrowsers | Where-Object { $_.DisplayName -like "*Browser*" }
 
 foreach ($browser in $chromiumBrowsers) {
-    Write-Output "Found Chromium browser: $($browser.Name)"
+    Write-Output "Found Chromium browser: $($browser.DisplayName)"
 
     # Path to the preferences file may vary
-    $prefsPath = Join-Path $browser.InstallLocation 'User Data\Default\Preferences'
+    $prefsPath = Join-Path $browser.UninstallString.Split("\""c)[1] 'User Data\Default\Preferences'
 
     if (Test-Path $prefsPath) {
         # Load existing preferences
