@@ -17,18 +17,19 @@ set restorePointDescription=AutoRestorePoint_!datetime!
 wmic /Namespace:\\root\default Path SystemRestore Call CreateRestorePoint "%restorePointDescription%", 100, 7
 echo Restore point created: %restorePointDescription%
 
-:: Powershell
-    for %%A in (*.ps1) do (
-        @powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%%A" -WindowStyle Hidden
-)
-
 :: Batch
 for %%B in (*.cmd) do (
     call "%%B"
+)
+
+:: Powershell
+    for %%A in (*.ps1) do (
+        @powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%%A" -WindowStyle Hidden
 )
 
 :: Registry
 for %%C in (*.reg) do (
     reg import "%%C"
 )
+
 endlocal
