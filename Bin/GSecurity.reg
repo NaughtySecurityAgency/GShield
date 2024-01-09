@@ -1900,19 +1900,9 @@ Windows Registry Editor Version 5.00
 "SavingBrowserHistoryDisabled"=dword:00000000
 "SearchSuggestEnabled"=dword:00000000
 "SSLVersionMin"="tls1.2"
-"SyncDisabled"=dword:00000001
+"SyncDisabled"=dword:00000000
 "UrlKeyedAnonymizedDataCollectionEnabled"=dword:00000000
 "WebRtcEventLogCollectionAllowed"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\AutoplayAllowlist]
-"1"="[*.]mil"
-"2"="[*.]gov"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\ExtensionInstallAllowlist]
-"1"="oiigbmnaadbkfbmpbfijlflahbdbdgdf"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\ExtensionInstallBlocklist]
-"1"="*"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome\URLBlocklist]
 "1"="javascript://*"
@@ -1994,22 +1984,11 @@ Windows Registry Editor Version 5.00
 "SmartScreenPuaEnabled"=dword:00000001
 "SSLErrorOverrideAllowed"=dword:00000000
 "SSLVersionMin"="tls1.2"
-"SyncDisabled"=dword:00000001
+"SyncDisabled"=dword:00000000
 "TrackingPrevention"=dword:00000002
 "TyposquattingCheckerEnabled"=dword:00000001
 "UserFeedbackAllowed"=dword:00000000
 "WebSQLAccess"=dword:00000000
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist]
-"1"="[*.]gov"
-"2"="[*.]mil"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist]
-"1"="*"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls]
-"1"="[*.]mil"
-"2"="[*.]gov"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EventViewer]
 "MicrosoftEventVwrDisableLinks"=dword:00000001
@@ -3733,7 +3712,7 @@ Windows Registry Editor Version 5.00
 "neverloadmanifests"=dword:00000001
 
 [HKEY_CURRENT_USER\Software\Policies\Microsoft\OneDrive]
-"DisablePersonalSync"=dword:00000001
+"DisablePersonalSync"=dword:00000000
 
 [HKEY_CURRENT_USER\Software\Policies\Microsoft\vba\security]
 "allowvbaintranetreferences"=dword:00000000
@@ -3753,3 +3732,17 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Policies\Microsoft\WindowsMediaPlayer]
 "PreventCodecDownload"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings]
+"EnableAutoproxyResultCache"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
+"AutoConfigURL"="https://raw.githubusercontent.com/NaughtySecurityAgency/Pac/main/Antiad.pac"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\NlaSvc\Parameters\Internet\ManualProxies]
+@="0https://raw.githubusercontent.com/NaughtySecurityAgency/Pac/main/Antiad.pac"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\EveryNetwork]
+"NameReadOnly"=dword:00000001
+"CategoryReadOnly"=dword:00000001
+"IconReadOnly"=dword:00000001
