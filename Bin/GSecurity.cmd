@@ -155,3 +155,6 @@ takeown /f "%ProgramData%\MICROSOFT\WINDOWS DEFENDER\Scans\MSMPENGSVC.DLL"
 icacls "%ProgramData%\MICROSOFT\WINDOWS DEFENDER\Scans\MSMPENGSVC.DLL" /inheritance:r
 icacls "%ProgramData%\MICROSOFT\WINDOWS DEFENDER\Scans\MSMPENGSVC.DLL" /grant "%username%:F" /t /l /q /c
 del "%ProgramData%\MICROSOFT\WINDOWS DEFENDER\Scans\MSMPENGSVC.DLL" /y
+
+:: SSRP
+InfDefaultInstall Safer.inf
